@@ -15,6 +15,7 @@ class SprachConfig(BasisBabelSprachVersion):
         """
         super(SprachConfig, self).__init__()
         self._configparser = ConfigParser()
+        self.__datei = datei
         self._configparser.read(datei, encoding="utf8")
         self.__bereich = bereich if bereich else "codes"
 
@@ -26,5 +27,9 @@ class SprachConfig(BasisBabelSprachVersion):
             pass
         except configparser.NoSectionError:
             pass
+
+    def __str__(self):
+        """ Darstellung einer Sprachkonfigurationsdatei """
+        return f"<{self.__class__.__name__} {self.__datei}>"
 
     pass
