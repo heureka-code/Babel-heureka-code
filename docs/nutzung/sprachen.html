@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sprachen &#8212; Babel-heureka-code  Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="Verwalter" href="verwalter.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="verwalter.html" title="Verwalter"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" accesskey="U">Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sprachen</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="sprachen">
+<h1>Sprachen<a class="headerlink" href="#sprachen" title="Permalink to this heading">¶</a></h1>
+<section id="basisklasse">
+<h2>Basisklasse<a class="headerlink" href="#basisklasse" title="Permalink to this heading">¶</a></h2>
+<p>Für Sprachen wird eine abstrakte Klasse definiert</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.BasisBabelSprachVersion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">BasisBabelSprachVersion</span></span><a class="headerlink" href="#Babel_heureka_code.BasisBabelSprachVersion" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Basisklasse fuer die Sprachkonfigurationen</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BasisBabelSprachVersion.wert_fuer_code">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wert_fuer_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#Babel_heureka_code.BasisBabelSprachVersion.wert_fuer_code" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittelt den uebersetzten Text fuer den Code</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="implementierung">
+<h2>Implementierung<a class="headerlink" href="#implementierung" title="Permalink to this heading">¶</a></h2>
+<p>Es gibt mehr als eine Standardimplementierung</p>
+<section id="eine-sprache-kann-innerhalb-des-codes-uber-ein-dictionary-definiert-werden">
+<h3>Eine Sprache kann innerhalb des Codes über ein Dictionary definiert werden<a class="headerlink" href="#eine-sprache-kann-innerhalb-des-codes-uber-ein-dictionary-definiert-werden" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.DictSprache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">DictSprache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.DictSprache" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erstellt eine Sprachkonfiguration im Code</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.DictSprache.wert_fuer_code">
+<span class="sig-name descname"><span class="pre">wert_fuer_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#Babel_heureka_code.DictSprache.wert_fuer_code" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittelt den referenzierten Wert</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="auch-kann-eine-sprache-uber-eine-konfigurationsdatei-definiert-werden">
+<h3>Auch kann eine Sprache über eine Konfigurationsdatei definiert werden<a class="headerlink" href="#auch-kann-eine-sprache-uber-eine-konfigurationsdatei-definiert-werden" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.SprachConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">SprachConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datei</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bereich</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.SprachConfig" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verwaltet eine Sprachkonfiguration aus einer Datei</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.SprachConfig.wert_fuer_code">
+<span class="sig-name descname"><span class="pre">wert_fuer_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#Babel_heureka_code.SprachConfig.wert_fuer_code" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittelt die passende Uebersetzung</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="anwendung">
+<h3>Anwendung<a class="headerlink" href="#anwendung" title="Permalink to this heading">¶</a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Babel_heureka_code</span> <span class="kn">import</span> <span class="n">BabelCode</span><span class="p">,</span> <span class="n">BabelVerwalter</span><span class="p">,</span> <span class="n">DictSprache</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verwalter</span> <span class="o">=</span> <span class="n">BabelVerwalter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="p">:</span> <span class="n">BabelCode</span> <span class="o">=</span> <span class="n">verwalter</span><span class="o">.</span><span class="n">code01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span>
+<span class="go">&lt;BabelCode code01&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span> <span class="o">=</span> <span class="n">DictSprache</span><span class="p">({</span><span class="s2">&quot;code01&quot;</span><span class="p">:</span> <span class="s2">&quot;Erster code&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">en</span> <span class="o">=</span> <span class="n">DictSprache</span><span class="p">(</span><span class="n">code01</span><span class="o">=</span><span class="s2">&quot;First code&quot;</span><span class="p">)</span>  <span class="c1"># Eine Sprache kann auch über kwargs erstellt werden</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span><span class="o">.</span><span class="n">wert_fuer_code</span><span class="p">(</span><span class="s2">&quot;code01&quot;</span><span class="p">)</span>
+<span class="go">&#39;Erster code&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">en</span><span class="o">.</span><span class="n">wert_fuer_code</span><span class="p">(</span><span class="s2">&quot;code01&quot;</span><span class="p">)</span>
+<span class="go">&#39;First code&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verwalter</span><span class="o">.</span><span class="n">setze_sprache</span><span class="p">(</span><span class="n">de</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="o">.</span><span class="n">wert</span>
+<span class="go">&#39;Erster code&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verwalter</span><span class="o">.</span><span class="n">setze_sprache</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">code1</span><span class="p">)</span>
+<span class="go">&#39;First code&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Inhaltsverzeichnis</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Sprachen</a><ul>
+<li><a class="reference internal" href="#basisklasse">Basisklasse</a></li>
+<li><a class="reference internal" href="#implementierung">Implementierung</a><ul>
+<li><a class="reference internal" href="#eine-sprache-kann-innerhalb-des-codes-uber-ein-dictionary-definiert-werden">Eine Sprache kann innerhalb des Codes über ein Dictionary definiert werden</a></li>
+<li><a class="reference internal" href="#auch-kann-eine-sprache-uber-eine-konfigurationsdatei-definiert-werden">Auch kann eine Sprache über eine Konfigurationsdatei definiert werden</a></li>
+<li><a class="reference internal" href="#anwendung">Anwendung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Vorheriges Thema</h4>
+    <p class="topless"><a href="verwalter.html"
+                          title="vorheriges Kapitel">Verwalter</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nutzung/sprachen.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="verwalter.html" title="Verwalter"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" >Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sprachen</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, heureka-code.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

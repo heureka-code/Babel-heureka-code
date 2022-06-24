@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Verwalter &#8212; Babel-heureka-code  Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Sprachen" href="sprachen.html" />
+    <link rel="prev" title="Codes" href="codes.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="sprachen.html" title="Sprachen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="codes.html" title="Codes"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" accesskey="U">Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Verwalter</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="verwalter">
+<h1>Verwalter<a class="headerlink" href="#verwalter" title="Permalink to this heading">¶</a></h1>
+<section id="basisklasse">
+<h2>Basisklasse<a class="headerlink" href="#basisklasse" title="Permalink to this heading">¶</a></h2>
+<p>Für Verwalter wird eine abstrakte Klasse definiert</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelBasisVerwalter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">BabelBasisVerwalter</span></span><a class="headerlink" href="#Babel_heureka_code.BabelBasisVerwalter" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Basisklasse fuer den Verwalter</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelBasisVerwalter.code_registrieren">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">code_registrieren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelBasisVerwalter.code_registrieren" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Registriert den Code dem Verwalter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelBasisVerwalter.ist_code_registriert">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ist_code_registriert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelBasisVerwalter.ist_code_registriert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Prueft, ob ein Code registriert ist</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelBasisVerwalter.setze_sprache">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setze_sprache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sprache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sprachen.html#Babel_heureka_code.BasisBabelSprachVersion" title="Babel_heureka_code._babel_basis_sprach_version.BasisBabelSprachVersion"><span class="pre">BasisBabelSprachVersion</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.BabelBasisVerwalter.setze_sprache" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Setzt die aktuelle Sprache des Verwalters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelBasisVerwalter.wert_fuer_code">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wert_fuer_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelBasisVerwalter.wert_fuer_code" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittelt den Wert fuer einen gegebenen Code</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="implementierung">
+<h2>Implementierung<a class="headerlink" href="#implementierung" title="Permalink to this heading">¶</a></h2>
+<p>Es gibt auch eine Standardimplementierung</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">BabelVerwalter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sprache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="sprachen.html#Babel_heureka_code.BasisBabelSprachVersion" title="Babel_heureka_code._babel_basis_sprach_version.BasisBabelSprachVersion"><span class="pre">BasisBabelSprachVersion</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Verwaltet verschiedene Referenzen</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter.code_registrieren">
+<span class="sig-name descname"><span class="pre">code_registrieren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter.code_registrieren" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Registriert einen Code</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>code_name</strong> – Der Name des zu registrierenden Codes</p>
+</dd>
+<dt class="field-even">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter.ist_code_registriert">
+<span class="sig-name descname"><span class="pre">ist_code_registriert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter.ist_code_registriert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Prueft, ob ein Code registriert ist</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>code_name</strong> – Der Name der Referenz</p>
+</dd>
+<dt class="field-even">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ob der Code existiert</p>
+</dd>
+<dt class="field-odd">Rückgabetyp<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter.setze_sprache">
+<span class="sig-name descname"><span class="pre">setze_sprache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sprache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sprachen.html#Babel_heureka_code.BasisBabelSprachVersion" title="Babel_heureka_code._babel_basis_sprach_version.BasisBabelSprachVersion"><span class="pre">BasisBabelSprachVersion</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter.setze_sprache" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Setzt die aktuell zu verwendende Sprache</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sprache</strong> – Die zu verwendende Sprache</p>
+</dd>
+<dt class="field-even">Rtype InkompatibleSprache<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wenn keine Instanz von BasisBabelSprachVersion genutzt wird</p>
+</dd>
+<dt class="field-odd">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter.undefinierte_codes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">undefinierte_codes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter.undefinierte_codes" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Liefert die Codes, die fuer die aktuelle Sprache nicht gesetzt sind</p>
+<dl class="field-list simple">
+<dt class="field-odd">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Die undefinierten Codes</p>
+</dd>
+<dt class="field-even">Rückgabetyp<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelVerwalter.wert_fuer_code">
+<span class="sig-name descname"><span class="pre">wert_fuer_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#Babel_heureka_code.BabelVerwalter.wert_fuer_code" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ermittelt den Wert fuer einen gegebenen Code</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>code</strong> – Der abgefragte Code</p>
+</dd>
+<dt class="field-even">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-even"><p>Der aktuelle Wert</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="anwendung">
+<h2>Anwendung<a class="headerlink" href="#anwendung" title="Permalink to this heading">¶</a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Babel_heureka_code</span> <span class="kn">import</span> <span class="n">BabelCode</span><span class="p">,</span> <span class="n">BabelVerwalter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verwalter</span> <span class="o">=</span> <span class="n">BabelVerwalter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="p">:</span> <span class="n">BabelCode</span> <span class="o">=</span> <span class="n">BabelCode</span><span class="o">.</span><span class="n">code01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="o">.</span><span class="n">verwalter_setzen</span><span class="p">(</span><span class="n">verwalter</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span>
+<span class="go">&lt;BabelCode code01&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="o">.</span><span class="n">wert</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">Babel_heureka_code.exceptions.KeineSpracheGesetzt</span>
+</pre></div>
+</div>
+<p>Oder</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Babel_heureka_code</span> <span class="kn">import</span> <span class="n">BabelCode</span><span class="p">,</span> <span class="n">BabelVerwalter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verwalter</span> <span class="o">=</span> <span class="n">BabelVerwalter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="p">:</span> <span class="n">BabelCode</span> <span class="o">=</span> <span class="n">verwalter</span><span class="o">.</span><span class="n">code01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span>
+<span class="go">&lt;BabelCode code01&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span><span class="o">.</span><span class="n">wert</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="gr">Babel_heureka_code.exceptions.KeineSpracheGesetzt</span>
+</pre></div>
+</div>
+<p>Der Verwalter muss jetzt noch wissen, welche Sprache verwendet werden soll, um die Codes zu übersetzen.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Inhaltsverzeichnis</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Verwalter</a><ul>
+<li><a class="reference internal" href="#basisklasse">Basisklasse</a></li>
+<li><a class="reference internal" href="#implementierung">Implementierung</a></li>
+<li><a class="reference internal" href="#anwendung">Anwendung</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Vorheriges Thema</h4>
+    <p class="topless"><a href="codes.html"
+                          title="vorheriges Kapitel">Codes</a></p>
+  </div>
+  <div>
+    <h4>Nächstes Thema</h4>
+    <p class="topless"><a href="sprachen.html"
+                          title="nächstes Kapitel">Sprachen</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nutzung/verwalter.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="sprachen.html" title="Sprachen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="codes.html" title="Codes"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" >Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Verwalter</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, heureka-code.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

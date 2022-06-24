@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Codes &#8212; Babel-heureka-code  Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Verwalter" href="verwalter.html" />
+    <link rel="prev" title="Nutzung" href="nutzung.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="verwalter.html" title="Verwalter"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="nutzung.html" title="Nutzung"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" accesskey="U">Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Codes</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="codes">
+<h1>Codes<a class="headerlink" href="#codes" title="Permalink to this heading">¶</a></h1>
+<p>BabelCode ist <em>die</em> Klasse für Codes, also Übersetzungsreferenzen</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code.</span></span><span class="sig-name descname"><span class="pre">BabelCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.BabelCode" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Klasse zur Referenzierung einer Sprachversion</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelCode.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#Babel_heureka_code.BabelCode.name" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Der verwendete Codename</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelCode.verwalter_setzen">
+<span class="sig-name descname"><span class="pre">verwalter_setzen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verwalter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="verwalter.html#Babel_heureka_code.BabelBasisVerwalter" title="Babel_heureka_code._babel_basis_verwalter.BabelBasisVerwalter"><span class="pre">BabelBasisVerwalter</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Babel_heureka_code.BabelCode.verwalter_setzen" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Setzt den Verwalter der Referenz</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameter<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>verwalter</strong> – Der zu setzende Verwalter</p>
+</dd>
+<dt class="field-even">Verursacht<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>InkompatiblerVerwalter</strong> – Wenn keine Instanz von BabelBasisVerwalter genutzt wird</p>
+</dd>
+<dt class="field-odd">Rückgabe<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Babel_heureka_code.BabelCode.wert">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wert</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">None]</span></em><a class="headerlink" href="#Babel_heureka_code.BabelCode.wert" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Der aktuell referenzierte Wert</p>
+</dd></dl>
+
+</dd></dl>
+
+<section id="die-metaklasse">
+<h2>Die Metaklasse<a class="headerlink" href="#die-metaklasse" title="Permalink to this heading">¶</a></h2>
+<p>Damit Referenzen auch mit der Syntax <code class="docutils literal notranslate"><span class="pre">BabelCode.referenz</span></code> erstellt werden können,
+wird eine Metaklasse dafür definiert, welche nur die Methode <code class="docutils literal notranslate"><span class="pre">__getattr__</span></code> überlädt.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Babel_heureka_code._babel_code_meta.BabelCodeMeta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Babel_heureka_code._babel_code_meta.</span></span><span class="sig-name descname"><span class="pre">BabelCodeMeta</span></span><a class="headerlink" href="#Babel_heureka_code._babel_code_meta.BabelCodeMeta" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Metaklasse fuer BabelCode</p>
+</dd></dl>
+
+</section>
+<section id="folgende-schreibweisen-sind-aquivalent">
+<h2>Folgende Schreibweisen sind äquivalent.<a class="headerlink" href="#folgende-schreibweisen-sind-aquivalent" title="Permalink to this heading">¶</a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Babel_heureka_code</span> <span class="kn">import</span> <span class="n">BabelCode</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">variante1</span> <span class="o">=</span> <span class="n">BabelCode</span><span class="o">.</span><span class="n">code01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">variante2</span> <span class="o">=</span> <span class="n">BabelCode</span><span class="p">(</span><span class="s2">&quot;code01&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">variante1</span> <span class="o">==</span> <span class="n">variante2</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</section>
+<section id="was-nun-kommt">
+<h2>Was nun kommt<a class="headerlink" href="#was-nun-kommt" title="Permalink to this heading">¶</a></h2>
+<p>Diese Codes referenzieren zwar nun auf einen bestimmten Namen, aber sie wissen nicht,
+woher sie eine Übersetzung nehmen sollten. Hierzu sind Verwalter erforderlich.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Inhaltsverzeichnis</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Codes</a><ul>
+<li><a class="reference internal" href="#die-metaklasse">Die Metaklasse</a></li>
+<li><a class="reference internal" href="#folgende-schreibweisen-sind-aquivalent">Folgende Schreibweisen sind äquivalent.</a></li>
+<li><a class="reference internal" href="#was-nun-kommt">Was nun kommt</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Vorheriges Thema</h4>
+    <p class="topless"><a href="nutzung.html"
+                          title="vorheriges Kapitel">Nutzung</a></p>
+  </div>
+  <div>
+    <h4>Nächstes Thema</h4>
+    <p class="topless"><a href="verwalter.html"
+                          title="nächstes Kapitel">Verwalter</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nutzung/codes.rst.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="verwalter.html" title="Verwalter"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="nutzung.html" title="Nutzung"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Babel-heureka-code  Dokumentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="nutzung.html" >Nutzung</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Codes</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, heureka-code.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>
